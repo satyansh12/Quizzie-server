@@ -16,13 +16,13 @@ app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("./public"));
 
-app.use(
-  cors({
-    origin: `${process.env.REACT_URL}`,
-    credentials: true,
-  })
-);
-
+// app.use(
+//   cors({
+//     origin: `${process.env.REACT_URL}`,
+//     credentials: true,
+//   })
+// );
+app.use(cors());
 // APIs------------------------------------------
 
 //health api
